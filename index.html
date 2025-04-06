@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Image Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="logo">Image Store</div>
+        <div class="links">
+            <a href="#">YouTube</a>
+            <a href="#">Email Us</a>
+            <a href="#">About Us</a>
+            <button id="themeToggle">Toggle Mode</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <header class="hero">
+        <h1>Discover Stunning Images</h1>
+        <form class="search" id="searchForm">
+            <input type="search" placeholder="Search high-quality images..." id="searchInput">
+            <button type="submit">Find Images</button>
+        </form>
+    </header>
+
+    <!-- Image Categories -->
+    <section class="categories">
+        <button class="category" data-category="nature">Nature</button>
+        <button class="category" data-category="technology">Technology</button>
+        <button class="category" data-category="travel">Travel</button>
+        <button class="category" data-category="food">Food</button>
+        <button class="category" data-category="architecture">Architecture</button>
+    </section>
+
+    <!-- Main Image Grid -->
+    <main class="main"></main>
+
+    <!-- Load More Button -->
+    <button class="load" id="loadMoreBtn">Load More</button>
+
+    <!-- Image Popup -->
+    <div class="popup" id="popup">
+        <span class="close" id="closePopup">&times;</span>
+        <img id="popupImg" src="" alt="Image Preview">
+        <p id="popupText"></p>
+        <a id="downloadBtn" download>Download Image</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Image Store. All Rights Reserved.</p>
+        <p>Images powered by <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
