@@ -8,7 +8,9 @@ const popupImg = document.getElementById("popupImg");
 const closePopup = document.getElementById("closePopup");
 const downloadBtn = document.getElementById("downloadBtn");
 const categories = document.querySelectorAll(".category");
-const themeToggle = document.getElementById("themeToggle");
+const themeToggle = document.getElementById("checkbox");
+const menuItems = document.querySelector(".menu-items");
+const menu = document.querySelector(".menu");
 
 let keyword = "nature";
 let page = 1;
@@ -37,8 +39,7 @@ function openPopup(image) {
 
 closePopup.addEventListener("click", () => popup.style.display = "none");
 
-// Toggle Theme
-themeToggle.addEventListener("click", () => document.body.classList.toggle("light-mode"));
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -60,3 +61,19 @@ categories.forEach(btn => btn.addEventListener("click", () => {
 }));
 
 fetchImages();
+
+let toggle = false
+menu.addEventListener("click",()=>
+{
+    if(!toggle)
+    {
+        menuItems.style.display = "flex"
+        toggle = true
+    }
+    else
+    {
+        menuItems.style.display = "none"
+        toggle = false
+    }
+
+})
