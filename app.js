@@ -24,7 +24,7 @@ async function fetchImages() {
     data.results.forEach(result => {
         const imgContainer = document.createElement("div");
         imgContainer.className = "image-container";
-        imgContainer.innerHTML = `<img src="${result.urls.large}" alt="${result.alt_description}">`;
+        imgContainer.innerHTML = `<img src="${result.urls.raw}" alt="${result.alt_description}">`;
         imgContainer.addEventListener("click", () => openPopup(result));
         output.appendChild(imgContainer);
     });
